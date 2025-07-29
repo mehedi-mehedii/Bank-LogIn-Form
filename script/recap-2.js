@@ -11,5 +11,5 @@ const addmoneyBtn = document.getElementById('addmoney-btn').addEventListener('cl
     }
 )
 
-log out try myself
+
 
