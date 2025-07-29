@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> log in Dashbord </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/5133032050.js" crossorigin="anonymous"></script>
+    <style>
+        #dashboard-page{
+            background-color: black;
+        }
+        
+            
+    </style>
+</head>
+<body>
+    <section id="dashboard-page" class="bg-black w-screen h-screen">
+        <div class="w-2/8 bg-white h-screen mx-auto">
+            <header>
+                <div class="flex justify-around items-center pt-3">
+                    <div class="flex items-center ">
+                    <div>
+                        <img src="assets/Group.png" alt="">
+                    </div>
+                        <div class="flex flex-col">
+                            <div>
+                            <h4 class="text-black font-bold text-2xl">$ <span id="main-balance">45000</span></h4>
+                        </div>
+                        <div>
+                            <p>Available Balance</p>
+                        </div>
+                        </div>
+                </div>
+        
+                <div>
+                    <button class="btn btn-secondary bg-white text-black" id="out-btn">  Log Out <i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+                </div>
+            </header><br>
+            <hr style="border: 1px solid purple;">
+            <main>
+                <h1 class="text-black font-bold text-2xl px-3 pt-4 ">🔥 Welcome to Payooo!</h1>
+                <p class="text-gray-500 font-medium text-base px-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+                <div class="flex mt-5 ">
+                    <div class="px-4 cursor-pointer  ">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl hover: border-red-600 border-2 border-solid text-blue-700  ">
+                        <div>
+                            <img src="assets/wallet1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Add Money</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="px-4 cursor-pointer">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                        <div>
+                            <img src="assets/send1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Cashout</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="px-4 cursor-pointer">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                        <div>
+                            <img src="assets/money1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Transfer Money</p>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <div class="flex mt-5">
+                    <div class="px-4 cursor-pointer">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                        <div>
+                            <img src="assets/bonus1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Get Bonus</p>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <div class="px-4 cursor-pointer">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                        <div>
+                            <img src="assets/purse1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Pay Bill</p>
+                        </div>
+
+                    </div>       
+                </div>
+                <div class="px-4 cursor-pointer">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                        <div>
+                            <img src="assets/transaction1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="text-xs">Transactions</p>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <h2 class="font-bold text-black text-xl my-4 px-4">Add Money</h2>
+                <!-- form section -->
+                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto  rounded-3xl">
+                     
+                        <form class="card-body">
+                            <!-- selet -->
+                                 <label class="label font-bold text-black">Select A Bank</label>
+                                <select class="select rounded-full">
+                                    
+                                    <option disabled selected>Select a bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="Racket">Rocket</option>
+                                </select>
+                             
+                            <fieldset class="fieldset">
+                                <label class="label font-bold text-black">Bank Account Number</label>
+                                <input value="01752841011" id="acc-number" required type="number" class="input rounded-full" placeholder="Enter 11 digit account number"/>
+                                <label class="label font-bold text-black">Amount to Add</label>
+                                <input id="account-number" required type="number" class="input rounded-full" placeholder="Add Amount to withdraw"/>
+                                <label class="label font-bold text-black">Pin Number</label>
+                                <input value="3385" id="account-pin" required type="number" class="input rounded-full" placeholder="Enter 4 digit pin number" />
+          
+                        <button id="addmoney-btn" class="btn text-white font-bold rounded-full w-19/20 bg-blue-500 mt-4">Add Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                
+            </main>
+        </div>
+
+    </section>
+    <script src="script/dashboard.js"></script>
+    <script>
+        const outBtn = document.getElementById('out-btn').addEventListener('click', 
+    function(){
+        event.preventDefault();
+        console.log('clicked')
+        window.location.href = "./index.html"
+    }
+)
+    </script>
+</body>
+</html>

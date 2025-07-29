@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Log in form</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <section id="front-page " class="bg-black w-screen h-screen">
+        <div class="w-2/8 bg-white h-screen mx-auto">
+            <header>
+                <nav>
+                    <div class="relative">
+                       
+                        <img class="mx-auto pt-56" src="assets/bg.png" alt="">
+                        <img class="mx-auto absolute left-52 bottom-52 " src="assets/Group.png" alt="">
+
+                        
+                    </div>
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto -my-48 rounded-3xl">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label font-bold text-black">Mobile Number</label>
+                                <input value="23456788912"  id="acc-number" required type="number" class="input rounded-full" placeholder="Enter Your Number"/>
+                                <label class="label font-bold text-black">4-Digit PIN</label>
+                                <input value="3385" id="acc-pin" required type="number" class="input rounded-full" placeholder="Enter 4-Digit PIN" />
+          
+                        <button id="login-btn" class="btn text-white font-bold rounded-full w-19/20 bg-blue-500 mt-4">Login</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    
+                </nav>
+            </header>
+        </div>
+                        
+                        
+                        
+
+    </section>
+    <script src="script/login.js"></script>
+    
+</body>
+</html>
