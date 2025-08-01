@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> log in Dashbord </title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/5133032050.js" crossorigin="anonymous"></script>
     <style>
         #dashboard-page{
             background-color: black;
+        }
+        #transaction-history{
+            height: 200px;
         }
         
             
@@ -45,7 +48,7 @@
                 <p class="text-gray-500 font-medium text-base px-4">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
                 <div class="flex mt-5 ">
                     <div class="px-4 cursor-pointer  ">
-                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl hover: border-red-600 border-2 border-solid text-blue-700  ">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col justify-center items-center gap-1 rounded-xl hover: border-red-600 border-2 border-solid text-blue-700 items-center  " id="add-money-box" >
                         <div>
                             <img src="assets/wallet1.png" alt="">
                         </div>
@@ -56,7 +59,7 @@
                     </div>
                 </div>
                 <div class="px-4 cursor-pointer">
-                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  " id="cash-out-box">
                         <div>
                             <img src="assets/send1.png" alt="">
                         </div>
@@ -103,7 +106,7 @@
                     </div>       
                 </div>
                 <div class="px-4 cursor-pointer">
-                    <div class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
+                    <div id="transaction-box" class="border-solid border-1 border-gray-300 w-32 px-4 py-4 flex flex-col  items-center gap-1 rounded-xl  ">
                         <div>
                             <img src="assets/transaction1.png" alt="">
                         </div>
@@ -114,9 +117,11 @@
                     </div>
                 </div>
                 </div>
-                <h2 class="font-bold text-black text-xl my-4 px-4">Add Money</h2>
+                <!-- <h2 class="font-bold text-black text-xl my-4 px-4">Add Money</h2> -->
                 <!-- form section -->
-                 <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto  rounded-3xl">
+                 <section id="add-money">
+                    <h2 class="font-bold text-blue-700 text-center text-xl my-4 px-4">Add Money</h2>
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto  rounded-3xl">
                      
                         <form class="card-body">
                             <!-- selet -->
@@ -141,12 +146,55 @@
                             </fieldset>
                         </form>
                     </div>
+                 </section>
+
+                <section id="cash-out">
+                    <h2 class="font-bold text-blue-700 text-center text-xl my-4 px-4">Cash Out</h2>
+                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto  rounded-3xl">
+                     
+                        <form class="card-body">
+                            <!-- selet -->
+                                 <!-- <label class="label font-bold text-black">Select A Bank</label>
+                                <select class="select rounded-full">
+                                    
+                                    <option disabled selected>Select a bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="Racket">Rocket</option>
+                                </select> -->
+                             
+                            <fieldset class="fieldset">
+                                <label class="label font-bold text-black">Agent Number</label>
+                                <input value="01752841011" id="acc-number" required type="number" class="input rounded-full" placeholder="Enter 11 digit Number"/>
+                                <label class="label font-bold text-black">Amount</label>
+                                <input id="acount-number" required type="number" class="input rounded-full" placeholder="Enter Amount to withdraw"/>
+                                <label class="label font-bold text-black">Pin Number</label>
+                                <input value="3385" id="acount-pin" required type="number" class="input rounded-full" placeholder="Enter 4 digit pin number" />
+          
+                        <button id="withdraw-btn" class="btn text-white font-bold rounded-full w-19/20 bg-blue-500 mt-4">Withdraw Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </section>
+
+                <section id="transaction">
+                    <h2 class="font-bold text-red-700 text-center text-xl my-4 px-4">Transactions History</h2>
+                    <div id="transaction-history" class="card bg-base-100 w-full max-w-sm bg-blue-500 w-full  shrink-0 shadow-2xl mx-auto  rounded-3xl">
+                     
+                    </div>
+                </section>
                 
             </main>
         </div>
 
     </section>
-    <script src="script/dashboard.js"></script>
+    <script src="utilities/utilities.js"></script>
+    <script src="script/addmoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
+    <script src="script/transaction.js"></script>
+    
+    
     <script>
         const outBtn = document.getElementById('out-btn').addEventListener('click', 
     function(){
